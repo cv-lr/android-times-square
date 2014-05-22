@@ -4,14 +4,16 @@ import android.util.Log;
 
 /** Log utility class to handle the log tag and DEBUG-only logging. */
 final class Logr {
+  private static final boolean ENABLED = false;
+
   public static void d(String message) {
-    if (BuildConfig.DEBUG) {
+    if (ENABLED && BuildConfig.DEBUG) {
       Log.d("TimesSquare", message);
     }
   }
 
   public static void d(String message, Object... args) {
-    if (BuildConfig.DEBUG) {
+    if (ENABLED && BuildConfig.DEBUG) {
       d(String.format(message, args));
     }
   }
