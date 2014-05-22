@@ -623,7 +623,7 @@ public class CalendarPickerView extends ListView {
       for (List<MonthCellDescriptor> weekCells : monthCells) {
         for (MonthCellDescriptor actCell : weekCells) {
           actCal.setTime(actCell.getDate());
-          if (sameDate(actCal, searchCal) && actCell.isSelectable()) {
+          if (sameDate(actCal, searchCal) && actCell.isCurrentMonth()) {
             return new MonthCellWithMonthIndex(actCell, index);
           }
         }
