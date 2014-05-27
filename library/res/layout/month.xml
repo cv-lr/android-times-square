@@ -12,7 +12,7 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="@dimen/calendar_month_topmargin"
       android:layout_marginBottom="@dimen/calendar_month_title_bottommargin"
-      android:gravity="center_horizontal"
+      android:gravity="left|center_horizontal"
       style="@style/CalendarTitle"
       />
   <com.squareup.timessquare.CalendarGridView
@@ -24,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/calendar_day_headers_paddingbottom"
+        android:visibility="gone"
         >
       <TextView
           android:layout_width="wrap_content"
