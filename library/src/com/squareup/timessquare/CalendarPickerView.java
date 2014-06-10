@@ -394,6 +394,10 @@ public class CalendarPickerView extends ListView {
     return selectedDates;
   }
 
+  public MonthDescriptor getFirstVisibleMonth() {
+      return (MonthDescriptor) getItemAtPosition(getFirstVisiblePosition());
+  }
+
   /** Returns a string summarizing what the client sent us for init() params. */
   private static String dbg(Date minDate, Date maxDate) {
     return "minDate: " + minDate + "\nmaxDate: " + maxDate;
