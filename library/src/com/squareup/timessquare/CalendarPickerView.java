@@ -394,6 +394,10 @@ public class CalendarPickerView extends ListView {
     return selectedDates;
   }
 
+  public int getFirstDayOfWeek() {
+      return Calendar.getInstance(locale).getFirstDayOfWeek();
+  }
+
   public MonthDescriptor getFirstVisibleMonth() {
       return (MonthDescriptor) getItemAtPosition(getFirstVisiblePosition());
   }
